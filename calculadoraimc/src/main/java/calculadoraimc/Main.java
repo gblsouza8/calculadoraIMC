@@ -2,6 +2,7 @@ package calculadoraimc;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        // declara as variaveis e as mensagens que serão exibidas no programa
         String genero;
         float peso, altura;
         float imc;
@@ -11,23 +12,29 @@ public class Main {
         String riscoModerado = "Seu IMC é considerado de risco moderado.";
         String riscoElevado = "Seu IMC é considerado de risco elevado.";
 
+        // introduz 
         System.out.println("Calcule o seu IMC!");
 
+        // inicia o scanner, pergunta o genero do usuário e armazena a resposta na variavel genero após deixar tudo em minusculo
         Scanner input = new Scanner(System.in);
         System.out.println("Você é homem ou mulher?");
         genero = input.nextLine();
         genero = genero.toLowerCase();
 
+        // switch-case dependendo do genero do usuário
         switch(genero)
         {
             case "homem":
+                // pergunta e armazena o peso e a altura do usuario
                 System.out.println("Insira o seu peso (em kg): ");
                 peso = input.nextFloat();
                 System.out.println("Insira a sua altura (em m): ");
                 altura = input.nextFloat();
 
+                // realiza o calculo usando a fórmula do imc
                 imc = peso/(altura*altura);
 
+                // realiza a verificação condicional e exibe a mensagem armazenada na variavel no inicio do programa dependendo
                 if (imc >= 17.9 && imc <= 18.9)
                 {
                     System.out.println(baixoRisco);
