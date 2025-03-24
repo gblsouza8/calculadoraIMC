@@ -31,6 +31,7 @@ public class Main {
                 peso = input.nextFloat();
                 System.out.println("Insira a sua altura (em m): ");
                 altura = input.nextFloat();
+                input.close();
 
                 // realiza o calculo usando a fórmula do imc
                 imc = peso/(altura*altura);
@@ -65,6 +66,7 @@ public class Main {
                 peso = input.nextFloat();
                 System.out.println("Insira a sua altura (em m): ");
                 altura = input.nextFloat();
+                input.close();
 
                 // realiza o calculo usando a fórmula do imc
                 imc = peso/(altura*altura);
