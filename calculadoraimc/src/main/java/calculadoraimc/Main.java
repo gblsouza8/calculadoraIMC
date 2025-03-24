@@ -24,6 +24,7 @@ public class Main {
         // switch-case dependendo do genero do usuário
         switch(genero)
         {
+            // se a resposta do usuario for homem:
             case "homem":
                 // pergunta e armazena o peso e a altura do usuario
                 System.out.println("Insira o seu peso (em kg): ");
@@ -34,7 +35,7 @@ public class Main {
                 // realiza o calculo usando a fórmula do imc
                 imc = peso/(altura*altura);
 
-                // realiza a verificação condicional e exibe a mensagem armazenada na variavel no inicio do programa dependendo
+                // realiza a verificação condicional e exibe a mensagem armazenada na variavel no inicio do programa
                 if (imc >= 17.9 && imc <= 18.9)
                 {
                     System.out.println(baixoRisco);
@@ -56,14 +57,19 @@ public class Main {
                 }
                 break;
 
+            // se a resposta do usuario for mulher:
             case "mulher":
+
+                // pergunta e armazena o peso e a altura do usuario
                 System.out.println("Insira o seu peso (em kg): ");
                 peso = input.nextFloat();
                 System.out.println("Insira a sua altura (em m): ");
                 altura = input.nextFloat();
 
+                // realiza o calculo usando a fórmula do imc
                 imc = peso/(altura*altura);
 
+                // realiza a verificação condicional e exibe a mensagem armazenada na variavel no inicio do programa
                 if (imc >= 15.0 && imc <= 17.9)
                 {
                     System.out.println(baixoRisco);
@@ -85,6 +91,8 @@ public class Main {
                 }
                 break;
 
+            
+            // caso a resposta do usuário seja algo que não está nos "cases"
             default:
                 System.out.println("Gênero inválido.");
                 break;
